@@ -1,0 +1,16 @@
+﻿测验
+2019年9月18日16:10:50
+参与人:软件181  王江坤
+1.一个完整的JavaScript结构包括哪些部分?
+答:分别由三部分构成的. 即: ECMAScript, dom, bom.
+
+2.JavaScript脚本分成哪几种?
+答:内部脚本，写在html文件中，以<script>标签包裹
+   外部脚本，写在js里面，使用引用的方式，引用到html中。
+
+3.JavaScript错误有哪几种?特点是什么?
+答:语法错误
+
+4.JavaScript的数据类型包括什么?分别写出.
+答:Number类型：整数，浮点数，string类型，布尔值，字符串，undefined
+   
