@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="new_file.css">
-    <script type="text/javascript" src="new_file.js"></script>
-</head>
-
-<body>
-    <div id="one" onclick="yuan()"></div>
-</body>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<h4>数字1：</h4><input type="text" id="in1"/>
+		<br />
+		<h4>数字2：</h4><input type="text" id="in2"/>
+		<button id="btn">点击相加计算</button>
+		<br />
+		<h4>结果：</h4><div id="show"></div>
+		<script type="text/javascript">
+			var show = document.getElementById("show");
+			var in1 = document.getElementById("in1");
+			var in2 = document.getElementById("in2");
+			var btn = document.getElementById("btn");
+			btn.onclick = function(){
+				if(isNaN(in1.value||in2.value)==true){
+					alert("请输入数字！");
+				}else{
+					var a = parseInt(Number(in1.value) + Number(in2.value));
+				show.innerHTML = a;
+				}
+				 
+			}
+			
+		</script>
+	</body>
 </html>
