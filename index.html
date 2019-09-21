@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		var a=prompt("请输入账号：");		
+		if(a==1){
+			var b=prompt("请输入密码：");
+			if(b==1){
+				alert('账户余额：30000元');
+				var c=prompt('请输入所取金额');
+				var d=30000;
+				if(c<=d){
+				alert('剩余金额:'+(d-c));
+				}else{
+					alert('请输入正确金额');
+				}
+				
+			}else{
+				alert('请重新输入');
+			}
+		}else{
+			alert('请输入正确账号！！！');
+		}
+		</script>
+	</body>
+</html>
