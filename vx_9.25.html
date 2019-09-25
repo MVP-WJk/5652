@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .box {
+        width: 400px;
+        border: 1px solid gray;
+        margin: 0 auto;
+       
+    }
+    .text {
+        width: 400px;
+        min-height: 600px;
+        background-color:aqua;
+    }
+    .say {
+        width: 400px;
+        height: 100px;
+        background-color: rgb(211, 214, 213);
+        overflow: hidden;
+    }
+    .say p {
+        float: left;
+        height: 100px;
+        width: 300px;
+        background-color: cadetblue;
+        line-height: 100px;
+    }
+    .say > button {
+        float: right;
+        height: 50px;
+        width: 100px;
+        margin-top: 25px;
+        
+    }
+    li {
+        list-style: none;
+        
+    }
+    
+    li:nth-child(odd){
+        text-align: right;
+    }
+    li:nth-child(odd):after {
+        content: ':钢铁直男';
+        font-size: 20px;
+        color: red;
+    }
+    li:nth-child(even){
+        text-align: left;
+    }
+    li:nth-child(even):before {
+        content: '神奇女侠:';
+        font-size: 20px;
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div id="box" class="box">
+        <ul class="text" id="l1"></ul>
+        <div class="say">
+            <p id="p1" contenteditable="true"></p>
+            <button id="btn">发送</button>
+        </div>
+    </div>
+    <script>
+          //获取元素
+        var l1 = document.getElementById('l1');
+        var p1 = document.getElementById('p1');
+        var btn = document.getElementById('btn');
+        //点击发送
+        btn.onclick = function(){
+            //用户输入的内容字符串
+            var n1 = p1.innerText;
+            //创建一个对话框,原本没有任何对话框
+            var d1 = document.createElement('li');
+            //把创建的这个空的对话框放到area区域中
+            l1.appendChild(d1);
+            //创建一个文本节点,他的内容是用户输入的那个字符串
+            var w1 = document.createTextNode(n1);
+            //把文本节点放到li里
+            d1.appendChild(w1);
+            //清空刚刚输入的内容
+            p1.innerText = '';
+        }
+    </script>
+</body>
+</html>
