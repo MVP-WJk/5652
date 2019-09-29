@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+  
+    </style>
+</head>
+<body>
+   <form action="" method="post">
+   <p>用户名：</p>	<input type="text" value="" id="in1"/>
+    <div id="inn1"></div>
+   <br />
+   	<p>密码：</p><input type="password" value="" id="in2"/>
+   	<div id="inn2"></div>
+   	<br />
+   	<p>密码：</p><input type="password" value="" id="in3"/>
+   	<div id="inn3"></div>
+   	<br />
+   	<input type="button" name="" id="btn" value="点击注册" />
+   </form>
+     <!--需求2:  
+1. 做一个简单的注册界面  
+2. 要求用户名和密码必须写才可以提交
+3. 提交之后弹出注册成功
+4. 如果有没有写的内容,进行提示
+5. 用户准备填写时,在右侧提示改用户名是否可以注册-->
+    <script>
+  	var in1 = document.getElementById('in1');
+ 	var in2 = document.getElementById('in2');
+    	var btn = document.getElementById('btn');
+    	var i = ['tom','jack','lili'];
+    	btn.onclick = function(){
+    		console.log(in1.value);
+    		if(in1.value==''){
+    		inn1.innerHTML = '昵称不可为空';
+    	    }else if(in1.value==i[0]||in1.value==i[1]||in1.value==i[2]){
+    	    inn1.innerHTML = '此用户名已注册';
+    		}else if(in2.value==''){
+    		inn2.innerHTML = '请输入密码';
+    		}else if(in3.value!=in2.value){
+            inn3.innerHTML = '请输入密码';
+            }else{
+            	alert('注册成功')
+            }
+    	}
+ 	
+        
+    </script>
+</body>
+</html>
