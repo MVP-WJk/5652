@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<style>
+    #mydiv{
+        width:200px;
+        height: 200px;
+        border-radius:50%;
+        background-color: green;
+        float: left;
+        margin-left: 20px;
+        border: 3px solid white;
+          position: relative;
+          z-index: 20;
+    }
+    .dv{
+        width:100px;
+        height: 100px;
+        border-radius:50%;
+        margin-left: 20px;
+        border: 3px solid white;
+    }
+    .big{
+        width: 80%;
+        height: 250px;
+      
+    }
+    #dv1,#dv2,#dv3,#dv4,#dv5,#dv6{
+    	display: ;
+        position: absolute;
+         top: 50px;
+         left: 50px;
+         z-index: 1;
+    }
+</style>
+<body>
+    <div class="big">
+    <div id="mydiv"></div>
+     <div class="dv" style="background-color: red;" id="dv1"></div>
+    <div class="dv" style="background-color: orange;" id="dv2"></div>
+    <div class="dv" style="background-color: yellow;" id="dv3"></div>
+    <div class="dv" style="background-color: purple;" id="dv4"></div>
+    <div class="dv" style="background-color: goldenrod;" id="dv5"></div>
+    <div class="dv" style="background-color: blue;" id="dv6"></div>
+    </div>
+    
+
+    <script>
+            var flag = 0; 
+            console.log(flag);
+			$("#mydiv").click(function(){
+            	if (flag == 0) {
+                   $('#dv1').animate({left:'220px'},1000);
+                   $('#dv2').animate({left:'340px'},1100);
+                   $('#dv3').animate({left:'460px'},1200);
+                   $('#dv4').animate({left:'580px'},1300);
+                   $('#dv5').animate({left:'700px'},1400);
+                   $('#dv6').animate({left:'820px'},1500);
+                   flag = 1;
+	            } else {
+                   $("#dv1,#dv2,#dv3,#dv4,#dv5,#dv6").animate({left:'50px'},1000);
+		           flag = 0;
+	            }
+            })  
+            $("#mydiv,#dv1,#dv2,#dv3,#dv4,#dv5,#dv6").click(function(){
+				$("body").css("backgroundColor",$(this).css("backgroundColor"));
+			})
+			
+    </script>
+</body>
+<html>
