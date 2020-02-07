@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        width: 50px;
+        height: 50px;
+        border: 1px solid darkcyan;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(s1.jpg);
+        opacity: 0;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        for(var i =0;i<16;i++){
+            for(var j =0;j<13;j++){
+            //创建一个什么元素
+            var divs = document.createElement('div');
+            //往body里面插入子元素
+            document.body.appendChild(divs);
+            //改变位置
+            divs.style.top = i * 50 +'px';
+            divs.style.left = j * 50 + 'px';
+             //背景图
+             divs.style.backgroundPositionY=-(50*i)+'px';
+             divs.style.backgroundPositionX=-(50*j)+'px';
+             divs.onmousemove= function(){
+          this.style.opacity = 1;
+      }
+        }
+        }
+    </script>
+</body>
+</html>
